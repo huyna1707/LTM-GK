@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự án Toán Vui</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Màn hình khởi động -->
+        <div id="start-screen" class="screen active">
+            <h1>Toán Vui</h1>
+            <div class="input-group">
+                <label for="player-name">Nhập tên của bạn:</label>
+                <input type="text" id="player-name" placeholder="Tên của bạn">
+            </div>
+            <div class="level-selection">
+                <h3>Chọn mức độ:</h3>
+                <div class="level-buttons">
+                    <button class="level-btn" data-level="easy">Dễ</button>
+                    <button class="level-btn" data-level="medium">Vừa</button>
+                    <button class="level-btn" data-level="hard">Khó</button>
+                </div>
+            </div>
+            <button id="start-game" class="start-btn" disabled>Bắt đầu</button>
+        </div>
+
+        <!-- Màn hình câu hỏi -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <div class="progress">
+                    <span id="question-number">1</span> / 10
+                </div>
+                <div class="timer">
+                    <span id="timer-display">30</span>s
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <h2 id="question-text">Câu hỏi sẽ hiển thị ở đây</h2>
+                <div class="answers">
+                    <button class="answer-btn" data-answer="0">A</button>
+                    <button class="answer-btn" data-answer="1">B</button>
+                    <button class="answer-btn" data-answer="2">C</button>
+                    <button class="answer-btn" data-answer="3">D</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup kết quả -->
+        <div id="result-popup" class="popup">
+            <div class="popup-content">
+                <h2 id="congratulations">Chúc mừng!</h2>
+                <p id="score-display">Điểm số: 0/10</p>
+                <div class="popup-buttons">
+                    <button id="finish-btn" class="popup-btn">Hoàn tất</button>
+                    <button id="new-level-btn" class="popup-btn">Chọn level khác</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
